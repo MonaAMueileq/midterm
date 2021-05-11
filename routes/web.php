@@ -39,7 +39,7 @@ Route::post('/{id}' , function($id){
     ->update([$id]);
     return view('allproduct');
 });
-Route::post('/{id}' , function($id){
+Route::delete('/{id}' , function($id){
     DB::table('products')->delete();
     DB::table('products')->where($id)->delete();
     return view('allproduct');
